@@ -1,0 +1,12 @@
+.hoveroveritem:hover {
+  background-color: grey;
+}
+.hoveroveritem {
+    padding: 1%
+}
+.mainman:hover {
+    background-color: grey;
+   }
+.mainman {
+   padding: 0.5%
+}
