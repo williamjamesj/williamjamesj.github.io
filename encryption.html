@@ -28,12 +28,13 @@
     <p>Although the Caesar Cipher is very simple and easy to understand, it is not a viable encryption method when you want something to remain private. Because there are only 26 different potential plaintext strings, tools such as the one below, are available that can guess all potential combinations, and the user can easily select the combination that makes sense.</p>
     <form>
         Cipher-text: <input type="text" id="cs-ciphertext">
-        Key (Enter 0 for all possible combinations): <input type="number" id="cs-decrypt-key">
+        Key (Enter 0 if unknown): <input type="number" id="cs-decrypt-key">
         <input type="button" onclick="decryptCaesarCipher();" value="Decrypt">
     </form>
+    <br>
     <div id="cs-combinations"></div>
     </div>
 </body>
 <script src="insertNavbar.js"></script>
-<script src="encryption.js"></script>
+<script src="encryption_scripts/cs_encryption.js"></script>
 </html>

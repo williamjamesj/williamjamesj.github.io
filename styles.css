@@ -24,3 +24,6 @@ form {
 .headerino {
   margin: 0.5%;
 }
+#cs-combinations {
+  display: inline-block;
+}
