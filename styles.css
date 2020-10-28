@@ -1,19 +1,36 @@
+body {
+  background-image: url(resources/double-bubble-dark.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+}
+h1 {
+  color: white;
+  margin-left: 4%;
+}
 .hoveroveritem:hover {
-  background-color: grey;
+  font-weight: bold;
 }
 .hoveroveritem {
-    padding: 1%
+    padding: 2%;
+}
+.navbararoni {
+  padding:1%;
 }
 .mainman:hover {
-    background-color: grey;
+    font-weight: bold;
+    color:white;
    }
 .mainman {
-   padding: 0.5%
+   padding: 0.5%;
+   color: white;
 }
 .textblock {
-  background-color: lightblue;
+  background-image: url(resources/moroccan-flower.png);
   padding: 1%;
-  margin: 1%;
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 90%;
 }
 #cs-block {
   display: inline;

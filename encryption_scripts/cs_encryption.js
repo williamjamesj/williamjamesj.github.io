@@ -50,7 +50,7 @@ function decryptCaesarCipher(){
     }
     outputBox = document.getElementById("cs-combinations")
     if (key == 0) {
-        outputBox.innerHTML = +tryAllCS(splittext).join("<br>");
+        outputBox.innerHTML = tryAllCS(splittext).join("<br>");
         outputBox.style.border = "thick solid #0000FF";
     }
     else {
