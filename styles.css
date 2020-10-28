@@ -10,3 +10,17 @@
 .mainman {
    padding: 0.5%
 }
+.textblock {
+  background-color: lightblue;
+  padding: 1%;
+  margin: 1%;
+}
+#cs-block {
+  display: inline;
+}
+form {
+  display: inline;
+}
+.headerino {
+  margin: 0.5%;
+}
