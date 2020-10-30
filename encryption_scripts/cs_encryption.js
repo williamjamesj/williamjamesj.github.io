@@ -1,3 +1,4 @@
+// hooked up to the onStart
 function clickCaesarCipher(){
     text = document.getElementById("cs-plaintext").value.toLowerCase();
     key = document.getElementById("cs-key").value;
@@ -11,9 +12,9 @@ function clickCaesarCipher(){
         // www.regexr.com (for when i can't understand what i wrote)
     for (i = 0; i < splittext.length; i++) {
         if (!(splittext[i].match("([a-z])"))){
-            alert("Please only enter letters")
+            alert("Please only enter letters");
             // kill it with fire
-            return("noopaloop")
+            return("noopaloop");
         }   
     }
     for (i = 0; i < splittext.length; i++) {
@@ -25,7 +26,7 @@ function shiftChar(character, key) {
     characterCode = parseInt(character.charCodeAt(0));
     encryptedCode = characterCode+key;
     if (encryptedCode>122) {
-        encryptedCode = encryptedCode-26
+        encryptedCode = encryptedCode-26;
     }
 
 
@@ -43,19 +44,17 @@ function decryptCaesarCipher(){
         // www.regexr.com (for when i can't understand what i wrote)
     for (i = 0; i < splittext.length; i++) {
         if (!(splittext[i].match("([a-z])"))){
-            alert("Please only enter letters")
+            alert("Please only enter letters");
             // kill it with fire
-            return("noopaloop")
+            return("noopaloop");
         }   
     }
     outputBox = document.getElementById("cs-combinations")
     if (key == 0) {
         outputBox.innerHTML = tryAllCS(splittext).join("<br>");
-        outputBox.style.border = "thick solid #0000FF";
     }
     else {
         outputBox.innerHTML = decryptCS(splittext,key);
-        outputBox.style.border = "";
     }
 }
 function tryAllCS(textArray) {
@@ -71,10 +70,10 @@ function decryptCS(textArray,key){
         characterCode = parseInt(textArray[count].charCodeAt(0));
         encryptedCode = characterCode-key;
         if (encryptedCode<97) {
-            encryptedCode = encryptedCode+26
+            encryptedCode = encryptedCode+26;
         }
         newArray.push(String.fromCharCode(encryptedCode));
     }
-    newArray = newArray.join("")
+    newArray = newArray.join("");
     return(newArray);
 }

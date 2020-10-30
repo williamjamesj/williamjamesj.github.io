@@ -1,4 +1,5 @@
 body {
+  /* Parallax scrolling*/
   background-image: url(resources/double-bubble-dark.png);
   background-attachment: fixed;
   background-position: center;
@@ -26,6 +27,7 @@ h1 {
    color: white;
 }
 .textblock {
+  /*The main black and white pattern themes*/
   background-image: url(resources/moroccan-flower.png);
   padding: 1%;
   margin-top: 3%;
