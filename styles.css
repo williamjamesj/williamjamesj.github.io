@@ -46,3 +46,10 @@ form {
 #cs-combinations {
   display: inline-block;
 }
+.instruction-block{
+  margin-left: 1%;
+  float: left;
+}
+.image-right {
+  float: right;
+}

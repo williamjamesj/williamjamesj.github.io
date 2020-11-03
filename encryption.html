@@ -36,7 +36,12 @@
     </div>
     <div class="container-fluid textblock">
         <h2>Vigenère Cipher & Gronsfeld Cipher</h2>
-        <p>The Vigenère Cipher is a more complicated method of encryption that typically uses a multiple character key, that can be used to encrypt data to an extent that is harder to brute force than a simple Caesar Cipher.</p>
+        <p>The Vigenère Cipher is a more complicated method of encryption that typically uses a multiple character key, that can be used to encrypt data to an extent that is harder to brute force than a simple Caesar Cipher. <br> An example of such would be encrypting the message "hello" with the key of "dog". </p>
+        <div class="instruction-block">
+        <img src="resources/vgtable.jpg" class="image-right" width="300" length="190">
+        <p>Step 1: Repeat the key, so that it is long enough for the entire plaintext. For example "dog" becomes "dogdo". <br> Step 2: For each of the characters, use a chart like the one to the right to change each of the characters, according to its companion in the repeated key. For example: The H becomes K, the E becomes S, the L becomes R, the second L becomes O and the final O becomes C. <br> Step 3: Put all of the characters together to make the encrypted text: In this example "hello" becomes "ksroc" after being encrypted with the key "dog".</p>
+        </div>
+        <p>This makes the Vigenère cipher much more difficult to crack, as there are significantly more potential combinations than a basic Caesar Cipher.</p>
     </div>
 </body>
 <script src="insertNavbar.js"></script>
