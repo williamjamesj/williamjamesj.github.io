@@ -18,7 +18,7 @@
     </div>
     <div class="container-fluid textblock">
     <h2>Caesar Cipher</h2>
-    <p>The first method (and most basic) method of encryption is the Caesar Cipher, a method that simply shifts all of the characters through the alphabet by a certain number (the key). For example, the plaintext "hello" shifted by a key of 1 would become "ifmmp", which becomes unreadable unless decrypted.</p>
+    <p>The first method (and most basic) method of encryption is the Caesar Cipher, a method that simply shifts all of the characters through the alphabet by a certain number (the key). For example, the plaintext "hello" shifted by a key of 1 would become "ifmmp", which becomes unreadable unless decrypted. These forms below ignores any non-alphanumeric characters.</p>
     <form>
         Plaintext: <input type="text" id="cs-plaintext">
         Key (Numbers to Shift by): <input type="number" id="cs-key">
@@ -42,8 +42,16 @@
         <p>Step 1: Repeat the key, so that it is long enough for the entire plaintext. For example "dog" becomes "dogdo". <br> Step 2: For each of the characters, use a chart like the one to the right to change each of the characters, according to its companion in the repeated key. For example: The H becomes K, the E becomes S, the L becomes R, the second L becomes O and the final O becomes C. <br> Step 3: Put all of the characters together to make the encrypted text: In this example "hello" becomes "ksroc" after being encrypted with the key "dog".</p>
         </div>
         <p>This makes the Vigenère cipher much more difficult to crack, as there are significantly more potential combinations than a basic Caesar Cipher.</p>
+        <form>
+            Plaintext: <input type="text" id="vc-plaintext">
+            Key (a string to shift by): <input type="text" id="vc-key">
+            <input type="button" value="Encrypt" onClick="clickVC();">
+        </form>
     </div>
+    <br>
+    <br>
 </body>
 <script src="insertNavbar.js"></script>
 <script src="encryption_scripts/cs_encryption.js"></script>
+<script src="encryption_scripts/vc_encryption.js"></script>
 </html>
