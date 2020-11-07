@@ -4,6 +4,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
+  padding: 1%;
 }
 h1 {
   color: white;
@@ -34,6 +35,11 @@ h1 {
   margin-left: 5%;
   width: 90%;
 }
+.tableofcontents {
+  max-width: 25%;
+  float: left;
+  border-radius: 5%;
+}
 #cs-block {
   display: inline;
 }
@@ -52,4 +58,10 @@ form {
 }
 .image-right {
   float: right;
+}
+.extrapadding {
+  padding: 1%;
+}
+.articleblock {
+  float: left;
 }

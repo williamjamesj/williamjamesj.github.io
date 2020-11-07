@@ -5,7 +5,7 @@ function sanitiseInput(splittext) {
         // www.regexr.com
         if (!(splittext[i].match("([a-z])"))){
             console.log("Invalid Character Detected")
-        }   
+        }
         else {
             cleanArray.push(splittext[i])
         }
@@ -46,7 +46,6 @@ function shiftChar(character, key) {
     if (encryptedCode>122) {
         encryptedCode = encryptedCode-26;
     }
-
     // turns it back into letters
     return(String.fromCharCode(encryptedCode));
 }
