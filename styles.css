@@ -1,13 +1,13 @@
 body {
   /* Parallax scrolling*/
-  background-image: url(resources/double-bubble-dark.png);
+  background-image: url(resources/bush.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   padding: 1%;
 }
 h1 {
-  color: white;
+  color: black;
   margin-left: 4%;
 }
 .hoveroveritem:hover {
@@ -25,16 +25,17 @@ h1 {
    }
 .mainman {
    padding: 0.5%;
-   color: white;
+   color: black;
 }
 .textblock {
   /*The main black and white pattern themes*/
-  background-image: url(resources/moroccan-flower.png);
+  background-color: white;
   padding: 1%;
   margin-top: 3%;
   margin-left: 5%;
   width: 90%;
   font-size:large;
+  border-radius: 20px;
 }
 .tableofcontents {
   max-width: 25%;
