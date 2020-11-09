@@ -13,11 +13,9 @@ function clickVC() {
     while (keysplit.length<plainsplit.length){
         keysplit=keysplit.concat(keysplit);
     }
-    alert(keysplit);
-    alert(plainsplit);
     newArray = [];
     for (i=0;i<plainsplit.length;i++) {
-        newArray.push(shiftChar(plainsplit[i],keysplit[i].charCodeAt(0)));
+        newArray.push(shiftChar(plainsplit[i],keysplit[i].charCodeAt(0)-97));
     }
-    console.log(newArray);
+    document.getElementById("vc-encrypted").innerHTML = `${plaintext} is encrypted with the key of "${key}" to become: ${newArray.join("")}`;
 }

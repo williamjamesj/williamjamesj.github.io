@@ -29,7 +29,7 @@ h1 {
 }
 .textblock {
   /*The main black and white pattern themes*/
-  background-color: white;
+  background-image: url(resources/repeated-square.png);
   padding: 1%;
   margin-top: 3%;
   margin-left: 5%;
