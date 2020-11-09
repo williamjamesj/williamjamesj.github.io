@@ -11,7 +11,7 @@ h1 {
   margin-left: 4%;
 }
 .hoveroveritem:hover {
-  font-weight: bold;
+  background-color: grey;
 }
 .hoveroveritem {
     padding: 2%;
@@ -20,8 +20,8 @@ h1 {
   padding:1%;
 }
 .mainman:hover {
-    font-weight: bold;
-    color:white;
+    background-color:grey;
+    color: black;
    }
 .mainman {
    padding: 0.5%;

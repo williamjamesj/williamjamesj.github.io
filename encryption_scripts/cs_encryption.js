@@ -1,3 +1,4 @@
+// Stack Overflow says i'm wrong.
 // removes non-alphanumeric characters and returns string
 function sanitiseInput(splittext) {
     cleanArray = [];
