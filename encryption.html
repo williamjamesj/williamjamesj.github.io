@@ -53,12 +53,25 @@
             <p id="vc-encrypted"></p>
         </form>
         <img src="resources/vigcombinations.png" class="image-right" width="350" length="132">
+        <p>Note: The key string doesn't retain case and will always be used as lowercase.</p>
         <p>The diagram to the left shows the difficulty of breaking a Vigenère Cipher with differing keys, meaning that to break a 14 key long ciphertext, a computer would have to make over sixty-four quintillion guesses, which would then need to be cross-referenced with a dictionary of English words, to find if the text had been deciphered. This would take way, way too long for a typical computer to break.</p>
+        <p>The form below shows how the Vigenère cipher is decrypted.</p>
+        <form>
+            Ciphertext: <input type= "text" id="vc-ciphertext">
+            Key: <input type="text" id="vc-cipherkey">
+            <input type="button" value="Decrypt" onclick="decryptVC();">
+            <p id="vc-decrypted"></p>
+        </form>
     </div>
     <!--An army of line breaks-->
     <br>    <br>
     <br>    <br>
     <br>    <br>    
+    <br>    <br>
+    <br>    <br>
+    <br>    <br>
+    <br>    <br>
+    <br>    <br>
     <br>    <br>
     <br>    <br>
     <br>    <br>
