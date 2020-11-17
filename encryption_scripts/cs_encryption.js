@@ -1,13 +1,13 @@
-// Stack Overflow says i'm wrong.
 // removes non-alphanumeric characters and returns string
 function sanitiseInput(splittext) {
     cleanArray = [];
     for (i = 0; i < splittext.length; i++) {
-        // www.regexr.com
+        // regex string used in the .replace() is from www.regexr.com, filters for most newline characters, then filters for any non-alphabetic or whitespace characters
         splittext[i].replace("/\r\n|\n|\r/gm","");
         if (!(splittext[i].match("([a-z]|[A-Z]|[ ])"))){
             console.log("Invalid Character Detected");
         }
+        // special case for space as it will be ignored later in the process
         else if (splittext[i]==" ") {
             cleanArray.push("SPACE");
         }
@@ -38,6 +38,7 @@ function clickCaesarCipher(){
         return("noop")
     }
     newArray = [];
+    // iterate through changing the characters by the number defined by the key
     for (i = 0; i < splittext.length; i++) {
         newArray.push(shiftChar(splittext[i],parseInt(key)))
     }

@@ -16,7 +16,7 @@
     <div id="navbar">Check that the insertNavbar.js file is present and working.</div>
     <div class="textblock">
     <p>Welcome to the Whack-a-Mole game! Hit the moles before they disappear to score points. You lose points if you hit anything that isn't a mole. Press the button below to start the game!</p>
-    <button onclick="startWhacka();">Start the game!</button>
+    <button onclick="startWhacka(1000);">Easy</button> <button onclick="startWhacka(500);">Medium</button> <button onclick="startWhacka(250);">Hard</button> <button onclick="startWhacka(100);">Very Hard</button> <button onclick="startWhacka(50);">Impossible</button>
     </div>
     <br>
     <br> 
@@ -28,7 +28,8 @@
     <br>
     <br>
     <div class="textblock">
-        <p id="timerp">Start the game with the button above!</p>
+        <p id="timerp">Start the game with one of the buttons above!</p>
+        <p id ="scorep">Start the game to see your score!</p>
     <table id="whackatable">
         <tr>
             <th name="square"><img src="resources/repeated-square.png" height="40%"></th>
@@ -60,4 +61,5 @@
 </body>
 <script src="insertNavbar.js"></script>
 <script src="whackamole.js"></script>
+<script>teacher_tracker("Whackamole");</script>
 </html>
