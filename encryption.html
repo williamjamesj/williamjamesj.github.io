@@ -62,6 +62,7 @@
             <input type="button" value="Decrypt" onclick="decryptVC();">
             <p id="vc-decrypted"></p>
         </form>
+        <p>The Gronsfeld Cipher is a version of the Vigenère Cipher that uses a numerical key instead of an alphabetic key, making it harder to memorise, and slightly easier to break as there are 10 possibilities per key instead of 26 in the Vigenère cipher.</p>
     </div>
     <!--An army of line breaks-->
     <br>    <br>
@@ -97,4 +98,7 @@
 <script src="insertNavbar.js"></script>
 <script src="encryption_scripts/cs_encryption.js"></script>
 <script src="encryption_scripts/vc_encryption.js"></script>
+<script>
+    teacher_tracker("Encryption");
+</script>
 </html>
