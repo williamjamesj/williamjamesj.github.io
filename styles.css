@@ -1,18 +1,44 @@
 body {
-  /* Parallax scrolling*/
+  /* Parallax scrolling, comes from https://www.w3schools.com/howto/howto_css_parallax.asp*/
   background-image: url(resources/bush.png);
-  background-attachment: fixed;
+  background-attachment: fixed; /* Has the backround remain static as you scroll */
   background-position: center;
-  background-repeat: repeat;
-  padding: 1%;
+  background-repeat: repeat; /* makes sure the background never ends, no matter how much content is on the page*/
+  padding: 1%; /* this is just nice to have */
 }
 h1 {
   color: black;
-  margin-left: 4%;
-  float: left;
+}
+.headeranimation h1 {
+  animation-name: headerh1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.headeranimation {
+  animation-name: header;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-style: outset;
+  background-color: lightblue;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 20%;
+}
+@keyframes headerh1 {
+  from {color: black;}
+  to {color: white;}
+}
+@keyframes header {
+  from {border-color: #849cf5; background-color: #2a50db; color: black;}
+  to {border-color: #2a50db; background-color: #849cf5; color: white;}
 }
 .hoveroveritem:hover {
   background-color: rgba(255, 255, 255, 0.4);
+  /* Offset of the shadow; size of the shadow; blur of the shadow; RGBA (RGB with transparency) of the shadow*/
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
+  border-radius: 5px;
 }
 .hoveroveritem {
     padding: 2%;
@@ -22,8 +48,11 @@ h1 {
   position: sticky;
 }
 .mainman:hover {
-    background-color:grey;
-    color: blue;
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    /* Offset of the shadow; size of the shadow; blur of the shadow; RGBA (RGB with transparency) of the shadow */
+    box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
+    color: black;
    }
 .mainman {
    padding: 0.5%;
@@ -40,11 +69,12 @@ h1 {
   font-size:large;
   border-radius: 20px;
   float: left;
+  border-style: solid;
 }
 .tableofcontents {
   max-width: 25%;
   float: right;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 #cs-block {
   display: inline;
@@ -91,3 +121,43 @@ form {
 .rollovertrigger:hover .rolloverbox{
   visibility: visible;
 }
+.animatedbanner {
+  /* inherits most from .textblock class*/
+  background-image: none;
+  border-style: solid;
+  animation-name: borderandbg;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes borderandbg {
+  from {
+    background-color: #6666ff;
+  }
+  10% {
+    background-color: #0099ff;
+  }
+  50% {
+    background-color: #00ff00;
+  }
+  75% {
+    background-color: #ff3399;
+  }
+  100% {
+    background-color: #6666ff;
+  }
+}
+.partybutton {
+  border-style: none;
+  border-radius: 10px;
+}
+.partybutton:hover {
+  /* Offset of the shadow; size of the shadow; blur of the shadow; RGBA (RGB with transparency) of the shadow */
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
+  border-radius: 5px;
+}
+/*
+border-radius = rounded corners, do in px or it gets weird with percent
+rgba colour = colours then a transparency value
+
+*/

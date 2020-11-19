@@ -34,8 +34,6 @@ function decryptVC() {
     while (keysplit.length<ciphersplit.length){
         keysplit=keysplit.concat(keysplit);
     }
-    console.log(keysplit);
-    console.log(ciphersplit);
     newArray = [];
     for (count=0;count<ciphersplit.length;count++) {
         // retain spaces for readability
@@ -43,12 +41,11 @@ function decryptVC() {
             newArray.push("SPACE");
             continue;
         }
-        if (ciphersplit[count] == ciphersplit[count].toUpperCase()){
+        if (ciphersplit[count] == ciphersplit[count].toUpperCase()){ // handles if the code is uppercase, retaining the case, because apparently there are different unicode codes for upper and lowercase letters
             key=keysplit[count].toUpperCase().charCodeAt(0)-65;
             encryptedCode=ciphersplit[count].charCodeAt(0)-key;
             if (parseInt(encryptedCode)<65) {
                 encryptedCode = encryptedCode+26;
-                console.log("uppercaseshifting");
             }
         }
         else {
@@ -57,12 +54,12 @@ function decryptVC() {
             console.log(encryptedCode);
             if (parseInt(encryptedCode)<97) {
                 encryptedCode = encryptedCode+26;
-                console.log("lowercaseshifting");
             }
         }
         newArray.push(encryptedCode);
     }
     newNewArray = []
+    // Adds the spaces back in and changes the unicode back to letters
     for (i=0;i<newArray.length;i++){
         if (newArray[i]=="SPACE"){
             newNewArray.push(" ");

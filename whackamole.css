@@ -2,8 +2,11 @@ table tr th{
     border: 1px solid black;
     border-collapse: collapse;
     table-layout: fixed;
+    width: 162px;
+    height: 207px;
 }
-
+th {
+}
 
 img {
     display: block;

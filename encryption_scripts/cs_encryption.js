@@ -85,12 +85,12 @@ function decryptCaesarCipher(){
     }
     outputBox = document.getElementById("cs-combinations")
     if (key == 0) {
-        // brute forces all 26 options
+        // brute forces all 26 options, then lists them with trailing newline characters
         outputBox.innerHTML = tryAllCS(splittext).join("<br>");
     }
     else {
-        // just decrypts a single string
-        outputBox.innerHTML = `${text} is decrypted to become: ${decryptCS(splittext,key)}`;
+        // just decrypts a single string, then prints it
+        outputBox.innerHTML = `<b>The ciphertext ${text} is decrypted to become: ${decryptCS(splittext,key)}</b>`;
     }
 }
 function tryAllCS(textArray) {
