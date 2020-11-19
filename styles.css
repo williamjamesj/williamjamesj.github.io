@@ -27,8 +27,8 @@ h1 {
   max-width: 20%;
 }
 @keyframes headerh1 {
-  from {color: black;}
-  to {color: white;}
+  from {color: white;}
+  to {color: black;}
 }
 @keyframes header {
   from {border-color: #849cf5; background-color: #2a50db; color: black;}
