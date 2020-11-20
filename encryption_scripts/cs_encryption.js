@@ -35,21 +35,21 @@ function clickCaesarCipher(){
     if (splittext.length == 0) {
         alert("Please enter a value");
         // leave
-        return("noop")
+        return("noop");
     }
     newArray = [];
     // iterate through changing the characters by the number defined by the key
     for (i = 0; i < splittext.length; i++) {
-        newArray.push(shiftChar(splittext[i],parseInt(key)))
+        newArray.push(shiftChar(splittext[i],parseInt(key)));
     }
     // display this to the user
     document.getElementById("cs-output").innerHTML = `${text} is encrypted as ${newArray.join("")}`;
 }
 function shiftChar(character, key) {
-    characterCode = parseInt(character.charCodeAt(0));
+    characterCode = parseInt(character.charCodeAt(0)); // get the unicode for the character
     encryptedCode = characterCode+key;
     if (character == "SPACE"){
-        return(" ");
+        return(" "); // retains the space if it was saved earlier
     }
     // goes back to the start of the alphabet if the unicode would be outside of the alphabet, also checks for either case
     if (character == character.toUpperCase()){
@@ -81,7 +81,7 @@ function decryptCaesarCipher(){
     if (splittext.length == 0) {
         alert("Please enter a value");
         // leave
-        return("noop")
+        return("noop");
     }
     outputBox = document.getElementById("cs-combinations")
     if (key == 0) {
@@ -111,6 +111,7 @@ function decryptCS(textArray,key){
         // handles spaces
         if (textArray[count] == "SPACE"){
             newArray.push(" ");
+            // skip the rest of the loop
             continue;
         }
         // goes back to the start of the alphabet if the unicode would be outside of the alphabet, also checks for either case

@@ -23,7 +23,7 @@ h1 {
   border-style: outset;
   background-color: lightblue;
   border-radius: 10px;
-  display: inline-block;
+  display: table;
   max-width: 20%;
 }
 @keyframes headerh1 {

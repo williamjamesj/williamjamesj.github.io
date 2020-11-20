@@ -5,9 +5,10 @@ table tr th{
     width: 162px;
     height: 207px;
 }
-th {
+.highscoretable tr th{
+    width: auto;
+    height: auto;
 }
-
 img {
     display: block;
     margin-left: auto;

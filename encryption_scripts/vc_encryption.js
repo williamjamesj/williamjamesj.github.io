@@ -51,7 +51,6 @@ function decryptVC() {
         else {
             key=keysplit[count].charCodeAt(0)-97;
             encryptedCode=ciphersplit[count].charCodeAt(0)-key;
-            console.log(encryptedCode);
             if (parseInt(encryptedCode)<97) {
                 encryptedCode = encryptedCode+26;
             }
