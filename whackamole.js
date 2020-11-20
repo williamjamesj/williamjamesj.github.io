@@ -12,11 +12,17 @@ storageronie = window.localStorage;
 loadScore();
 scoreName = "";
 function loadScore() {
-    document.getElementById("Easy").innerHTML = storageronie.getItem('Easy');
-    document.getElementById("Medium").innerHTML = storageronie.getItem('Medium');
-    document.getElementById("Hard").innerHTML = storageronie.getItem('Hard');
-    document.getElementById("VeryHard").innerHTML = storageronie.getItem('VeryHard');
-    document.getElementById("Impossible").innerHTML = storageronie.getItem('Impossible');
+    // loads all of the scores separately and replaces them with the string "0" if there are no scores
+    difficultyArray = ["Easy","Medium","Hard","VeryHard", "Impossible"]
+    for (i=0;i<difficultyArray.length;i++) {
+        score = storageronie.getItem(difficultyArray[i]);
+        if (score == null){
+            document.getElementById(difficultyArray[i]).innerHTML = "0";
+        }
+        else {
+            document.getElementById(difficultyArray[i]).innerHTML = score;
+        }
+    }
 }
 function saveScore(score,type) {
     storageronie.setItem(score,type);
@@ -41,7 +47,7 @@ function startWhacka(skill, difficulty){
 
 }
 function intervaleronie(){
-    if (timer < 0) {
+    if (timer <= 0) {
         // stop the game from running any more
         clearInterval(intervaleroniesoni);
         // allow the user to start the game again
@@ -98,8 +104,8 @@ function goodbye(currentsquarenumber) { // the goodbyeIntervals array contains a
 }
 // loop through and remove anything that remains
 function stoperoni() {
-    window.alert(`Congratulations you scored ${score} points!`);
     for (var i;i<squareArray.length;i++) {
         squareArray[i].innerHTML == ''; // removes everything
     }
+    alert("Game Over!");
 }

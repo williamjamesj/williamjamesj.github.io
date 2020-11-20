@@ -15,7 +15,7 @@
 <body>
     <div id="navbar">Check that the insertNavbar.js file is present and working.</div>
     <div class="textblock">
-    <p>Welcome to the Whack-a-Zac game! Hit the Zacs before they disappear to score points. You lose points if you hit anything that isn't a Zac. This game comes complete with an <i>immersive</i> sound system. Press the button below to start the game!</p>
+    <p>Welcome to the Whack-a-Zac game! Hit the Zacs before they disappear to score points. You lose points if you hit anything that isn't a Zac. Sometimes a Zac will come too fast to hit it. This game comes complete with an <i>immersive</i> sound system. Press the button below to start the game!</p>
     <!--Fun fact, the average human reaction time isn't fast enough to react to the impossible mode.-->
     <button onclick="startWhacka(1000, 'Easy');">Easy</button> <button onclick="startWhacka(750,'Medium');">Medium</button> <button onclick="startWhacka(500,'Hard');">Hard</button> <button onclick="startWhacka(200,'VeryHard');">Very Hard</button> <button onclick="startWhacka(50,'Impossible');">Impossible</button>
     </div>
@@ -76,6 +76,7 @@
                 <th id="Impossible"></th>
             </tr>
         </table>
+        <button onclick="window.localStorage.clear();">ClearScores</button>
     </div>
 </body>
 <script src="insertNavbar.js"></script>
